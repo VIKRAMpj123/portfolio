@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --color-black: #222;
+  --color-white: #fff;
+}
+
+.dark {
+  --color-black: #fff;
+  --color-white: #222;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-black);
+  text-transform: capitalize;
+}
+
+a {
+  color: var(--color-black);
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 10%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 30px;
+  transition: 0.3s;
+}
+
+header .nav a:hover,
+header .nav a:active {
+  color: #38b6ff;
+}
+
+.toggle-btn {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  border: 2px solid var(--color-black);
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+.toggle-btn::before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  background: var(--color-black);
+  border-radius: 50%;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2px;
+  transition: 0.3s;
+}
+body.dark .toggle-btn::before {
+  left: 30px;
+}
+
+.home {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 10% 0;
+}
+
+.home .content {
+  max-width: 600px;
+}
+
+.content h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.content h1 {
+  font-size: 70px;
+  text-transform: uppercase;
+  line-height: 70px;
+}
+
+.content h1 span {
+  color: #38b6ff;
+}
+
+.content p {
+  max-width: 600px;
+}
+
+.content .icons i {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  margin: 25px 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #38b6ff;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.content .icons i:nth-child(1) {
+  margin-left: 0px;
+}
+
+.content .icons i:hover {
+  transform: translateY(-10px) scale(1.1);
+  background: #38b6ff;
+  color: #fff;
+}
+
+.content button {
+  width: 160px;
+  height: 50px;
+  background: #38b6ff;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  outline: none;
+  border: 2px solid transparent;
+  border-radius: 40px;
+  cursor: pointer;
+  box-shadow: 0 0 5px #38b6ff;
+  transition: 0.3s;
+}
+
+.content button:nth-child(2) {
+  background: transparent;
+  color: #38b6ff;
+  border-color: #38b6ff;
+  margin-left: 15px;
+}
+
+.content button:hover {
+  transform: scale(1.05);
+}
+
+.home img {
+  height: 65vh;
+  width: 330px;
+  border-radius: 5%;
+  object-fit: cover;
+  overflow: hidden;
+  border: 2px solid #38b6ff;
+  filter: drop-shadow(0 30px 10px rgba(56, 182, 255, 0.5));
+}
